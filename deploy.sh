@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # This script provides an example of how to deploy the universal forwarder
 # to many remote hosts via ssh and common Unix commands.
