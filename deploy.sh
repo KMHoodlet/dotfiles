@@ -51,7 +51,10 @@ NEW_PARENT="/opt"
 # host.  Specify the host and management (not web) port of the deployment server
 # that will be managing these forwarder instances.  If you do not wish to use
 # a deployment server, you may leave this unset.
-#
+
+# If on AWS, the Address needs to be the INTERNAL ADDRESS (172.#.#.#)
+# Example:
+#   DEPLOY_SERV="52.39.126.124:8089"
 
 # TODO: Replace this IP Address
 DEPLOY_SERV="52.39.126.124:8089"
