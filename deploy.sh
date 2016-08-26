@@ -24,13 +24,14 @@
 #AWS UF (Note using internal IP for AWS-FWD)
 #splunkuser@172.30.16.224
 
-HOSTS_FILE="splunk.install.list"
+HOSTS_FILE="forwarder.list"
 
 # This is the path to the tar file that you wish to push out.  You may
 # wish to make this a symlink to a versioned tar file, so as to minimize
 # updates to this script in the future.
 
-SPLUNK_FILE="splunkforwarder-6.4.0-f2c836328108-Linux-x86_64.tgz"
+# TODO: Confirm this is the correct file name
+SPLUNK_FILE="splunkforwarder-6.4.3-b03109c2bad4-Linux-x86_64.tgz"
 
 # This is where the tar file will be stored on the remote host during
 # installation.  The file will be removed after installation.  You normally will
@@ -43,6 +44,7 @@ SPLUNK_FILE="splunkforwarder-6.4.0-f2c836328108-Linux-x86_64.tgz"
 # installation (if any).  This directory will be created at runtime, if it does
 # not exist.
 
+# TODO: Make sure you've moved the above SPLUNK_FILE to /opt
 NEW_PARENT="/opt"
 
 # After installation, the forwarder will become a deployment client of this
@@ -51,6 +53,7 @@ NEW_PARENT="/opt"
 # a deployment server, you may leave this unset.
 #
 
+# TODO: Replace this IP Address
 DEPLOY_SERV="52.39.126.124:8089"
 
 # A directory on the current host in which the output of each installation
@@ -59,7 +62,7 @@ DEPLOY_SERV="52.39.126.124:8089"
 # $LOG_DIR/<[user@]destination host>.  If installation on a host fails, a
 # corresponding file will also be created, as
 # $LOG_DIR/<[user@]destination host>.failed.
-LOG_DIR="/tmp/splunkua.install"
+LOG_DIR="/tmp/splunkuf.install"
 
 # For conversion from normal Splunk Enterprise installs to the universal forwarder:
 # After installation, records of progress in indexing files (monitor)
